@@ -6,7 +6,6 @@ import {
   updateProfile,
   signOut,
 } from 'firebase/auth';
-import { addDoc, collection } from "firebase/firestore"; 
 
 // Create an authentication context
 const AuthContext = createContext();
