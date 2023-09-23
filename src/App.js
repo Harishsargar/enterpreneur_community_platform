@@ -6,8 +6,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Profile from './components/Profile';
 import { AuthProvider } from './AuthContext'; // Import your authentication context
 import UpdateProfile from './components/UpdateProfile';
+import { storage, auth ,firestore} from "./firebase";
 
 
+// nsjksbebdsmbdshvdsscbdsjhvdsj
 function App() {
   return (
     <>
