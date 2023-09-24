@@ -9,21 +9,12 @@ import { storage, auth ,firestore} from "../firebase";
   const [userData, setUserData] = useState(null);
   let navigate = useNavigate();
 
-  // const docRef = doc(firestore, "users", uid);
-  // const docSnap =  getDoc(docRef);
 
   const handleBack=(e)=>{
     e.preventDefault();
     navigate('/Profile')
   }
 
-  // if (docSnap.exists()) {
-  //   console.log("Document data:", docSnap.data());
-  // } else {
-  //   // docSnap.data() will be undefined in this case
-  //   console.log("No such document!");
-  // }
-  // Fetch user data based on the UID
   useEffect(() => {
     console.log(uid)
     getDoc(doc(firestore, "users", uid)).then(docSnap => {
@@ -36,11 +27,7 @@ import { storage, auth ,firestore} from "../firebase";
         console.log("No such document!");
       }
     })
-    // Replace with your logic to fetch user data based on the UID
-    // Example:
-    // fetchDataByUID(uid).then((data) => {
-    //   setUserData(data);
-    // });
+
   }, [uid]);
 
   return (
@@ -50,7 +37,7 @@ import { storage, auth ,firestore} from "../firebase";
         <div>
           <p>Username: {userData.username}</p>
           <p>proffession: {userData.proffession}</p>
-
+          {/* <p>photo: {userData.photoURLs}</p> */}
           
           {/* <img src={userData.photoURLs}  alt="Profile Picture" /> */}
           <p>Photos:</p>
@@ -58,12 +45,9 @@ import { storage, auth ,firestore} from "../firebase";
                 <img key={index} src={photo} 
                 style={{width: "192px", height: "192px"}}
                 alt={`Photo ${index}`} />))}
-          {/* Add more fields as needed */}
         </div>
       )}
-     
-      {/* Display user profile data */}
-      {/* Replace with your logic to display user data */}
+
       <br/>
             <br/>
 

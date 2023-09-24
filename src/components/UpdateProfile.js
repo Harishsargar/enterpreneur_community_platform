@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { getDoc, doc, setDoc } from 'firebase/firestore';
+import { getDoc, doc, setDoc,updateDoc } from 'firebase/firestore';
 import { storage, auth, firestore } from '../firebase';
 
 function UpdateProfile() {
@@ -47,15 +47,16 @@ function UpdateProfile() {
 
   const handleUpdateProfile = async (e) => {
     e.preventDefault();
-
+  
     const userRef = doc(firestore, 'users', currentUserid);
     const updateData = {
       username: username,
       proffession: proffession,
     };
-
+  
     try {
-      await setDoc(userRef, updateData); // Use setDoc to update the document
+      // Use updateDoc with { merge: true } to update specific fields without overwriting others
+      await updateDoc(userRef, updateData, { merge: true });
       console.log('Document successfully updated!');
       // Optionally, show a success toast message to the user
       toast.success('Profile updated successfully!');
@@ -65,6 +66,7 @@ function UpdateProfile() {
       toast.error('Error updating profile. Please try again.');
     }
   };
+  
 
   return (
     <div className="text-center m-5-auto">

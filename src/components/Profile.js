@@ -71,7 +71,7 @@ useEffect(() => {
       <SearchUser/>
       <p>-------------------------</p>
 
-      <Newspost/><br/>
+      <Newspost/><br/>  
       <Photoupload/>
       <button onClick={ updateProfile}>update profile</button>
       <br/>
