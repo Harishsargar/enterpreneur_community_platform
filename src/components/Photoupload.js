@@ -8,7 +8,7 @@ import {
 } from "firebase/storage";
 import { storage, auth ,firestore} from "../firebase";
 import { v4 } from "uuid";
-import { collection, setDoc,updateDoc ,getDoc,doc} from "firebase/firestore"; 
+import { updateDoc ,getDoc,doc} from "firebase/firestore"; 
 import '../css/Photoupload.css'
 
 
@@ -92,22 +92,7 @@ function Photoupload() {
             } catch (error) {
               console.error('Error updating photo URLs:', error);
             }
-          // await setDoc(doc(firestore, "users", auth.currentUser.uid), {
-          //   posts: url
-          // }); 
-          // const userDocRef =  doc(firestore, "users", currentUserid)
-          // //  {
-          // //   posts: url
-          // // };
-          // try {
-          //   await updateDoc(userDocRef, {
-          //     posts: url// This will add 'url' to the 'posts' array
-          //   });
-          //   console.log('Data added to the document successfully');
-          // } catch (error) {
-          //   console.error('Error updating document:', error);
-          // }
-          
+        
           setImageUrls((prev) => [...prev, { url, item: snapshot.ref }]);
           setImageCount((count) => count + 1); // Increment the image count
           console.log('uploaded !!')

@@ -32,39 +32,7 @@ const Login = () => {
   };
 
   return (
-//     <div className="login-container">
-//     <ToastContainer />
-//     <div className="login-card">
-//       <h2>Login</h2>
-//       <div className="form-group">
-//         <label>Email</label>
-//         <input
-//           type="email"
-//           className="form-control"
-//           placeholder="Email"
-//           value={email}
-//           onChange={(e) => setEmail(e.target.value)}
-//         />
-//       </div>
-//       <div className="form-group">
-//         <label>Password</label>
-//         <input
-//           type="password"
-//           className="form-control"
-//           placeholder="Password"
-//           value={password}
-//           onChange={(e) => setPassword(e.target.value)}
-//         />
-//       </div>
-//       <button className="btn btn-primary" onClick={handleLogin}>
-//         Login
-//       </button>
-//       <p>
-//         Don't have an account? <Link to="/Register">Register here</Link>
-//       </p>
-//     </div>
-//   </div>
-// );
+
 <div className="text-center m-5-auto">
   <h1>Enterprenur Community Platform</h1> 
 <ToastContainer />
