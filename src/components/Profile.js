@@ -5,9 +5,9 @@ import { useNavigate } from "react-router-dom";
 import Photoupload from './Photoupload';
 import {useAuth }from '../AuthContext';
 import "react-toastify/dist/ReactToastify.css";
-import { updateProfile } from 'firebase/auth';
+// import { updateProfile } from 'firebase/auth';
 import SearchUser from './SearchUser';
-import { collection, updateDoc,getDoc,setDoc ,doc} from "firebase/firestore"; 
+import {  getDoc ,doc} from "firebase/firestore"; 
 import '../css/profile.css'
 
 
@@ -15,7 +15,7 @@ import '../css/profile.css'
 
 function Profile() {
   const [UserData, setUserData] = useState('')
-  const [Defaultusername, setDefaultusername] = useState('')
+  // const [Defaultusername, setDefaultusername] = useState('')
   let navigate = useNavigate();
   const {  logout } = useAuth();
   const currentUser = auth.currentUser;
