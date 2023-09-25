@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {getDocs, collection, query, where} from "firebase/firestore"; 
-import { storage, auth ,firestore} from "../firebase";
+import { firestore} from "../firebase";
 import { Link } from "react-router-dom";
 import '../css/SearchUser.css'
 
