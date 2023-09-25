@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import {getDocs, collection, query, where} from "firebase/firestore"; 
 import { storage, auth ,firestore} from "../firebase";
 import { Link } from "react-router-dom";
+import '../css/SearchUser.css'
 
 
 function SearchUser() {
@@ -41,13 +42,18 @@ function SearchUser() {
     <div>
        <div>
       {/* <h1>User Search</h1> */}
-      <input
+      {/* <input
         type="text"
         placeholder="Search by username"
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
-      />
-      <button onClick={handleSearch}>Search</button>
+      /> */}
+       <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search..." 
+         value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}/>
+        <button class="search-button" onClick={handleSearch}>Search</button>
+    </div>
+      {/* <button onClick={handleSearch}>Search</button> */}
       <ul>
         {searchResults.map((user, index) => (
         //   <li key={index}>{user.username}</li>

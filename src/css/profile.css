@@ -1,0 +1,55 @@
+header{
+    background-color: blue  ;
+    color: antiquewhite;
+    padding: 20px;
+    text-align: center;
+}
+
+#firstdiv {
+    display: flex; /* Use flexbox to arrange children side by side */
+}
+
+/* Style for each individual div */
+.content {
+    flex: 1; /* Allow the div to grow and occupy available space equally */
+    margin: 10px; /* Add some spacing between the divs */
+    padding: 10px; /* Add padding to the div content */
+    border: 1px solid #ccc; /* Add a border for visual separation */
+}
+
+
+/* new changes */
+.header-container {
+    display: flex;
+    align-items: center; /* Vertically center items */
+}
+
+.search-bar {
+    flex: 1; /* Grow to take available space */
+}
+
+.button-container {
+    display: flex;
+    gap: 10px; /* Adjust the spacing between buttons */
+}
+
+.update-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+
+.logout-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}

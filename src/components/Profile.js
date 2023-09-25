@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { updateProfile } from 'firebase/auth';
 import SearchUser from './SearchUser';
 import { collection, updateDoc,getDoc,setDoc ,doc} from "firebase/firestore"; 
+import '../css/profile.css'
 
 
 // import Search from './Search';
@@ -62,22 +63,38 @@ useEffect(() => {
 
   return (
     <div> 
-      
+      <header>  
       <h1> {UserData.username}</h1>
       <p> {UserData.proffession}</p>
-      <p>****************************************************</p>
+      </header>
+      {/* <p>****************************************************</p> */}
       {/* <Search/> */}
-      <p>-------------------------</p>
-      <SearchUser/>
-      <p>-------------------------</p>
+      {/* <p>-------------------------</p> */}
+      <div class="header-container">
+        <div class="search-bar">
+            <SearchUser/>
+        </div>
+        <div class="button-container">
+            <button class="update-button" onClick={updateProfile}>Update Profile</button>
+            <button class=" logout-button" onClick={handleLogout}>Logout</button>
+        </div>
+    </div>
 
-      <Newspost/><br/>  
-      <Photoupload/>
+      {/* <div>
+      <SearchUser/>
       <button onClick={ updateProfile}>update profile</button>
+      <button onClick={ handleLogout}>Logout</button>
+      </div> */}
+      {/* <p>-------------------------</p> */}
+      <div id='firstdiv'>
+        <div class="content"><Newspost/>  </div>
+      <div class="content"><Photoupload/></div>
+      </div>
+      {/* <button onClick={ updateProfile}>update profile</button>
       <br/>
       <br/>
       <button onClick={ handleLogout}>Logout</button>
-      <br/>
+      <br/> */}
       <br/>
     </div>
   )

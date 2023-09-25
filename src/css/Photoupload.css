@@ -1,0 +1,88 @@
+#Photoupload {
+    background-color: #fff;
+    padding: 20px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+/* Style for the file input container */
+.file-input-container {
+    text-align: center;
+    margin: 20px;
+}
+
+/* Style for the file input label */
+.file-input-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Style for the file input itself (hidden) */
+.file-input-hidden {
+    display: none;
+}
+
+/* Style for the "Upload Image" button */
+.upload-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Style for hover effect on buttons */
+.file-input-button:hover,
+.upload-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* image grid */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(192px, 1fr));
+    grid-gap: 20px; /* Adjust the gap as needed */
+  }
+  
+  .image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .image {
+    width: 192px;
+    height: 192px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  button {
+    background-color: #ff4646;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #d42828;
+  }
+  

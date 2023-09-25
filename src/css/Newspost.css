@@ -1,0 +1,82 @@
+#newsPosting {
+    background-color: #fff;
+    padding: 20px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .search-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Style for the search button on hover */
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+  /* Style for the textarea */
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    resize: none;
+}
+
+/* Style for the textarea when focused */
+textarea:focus {
+    border-color: #007bff; /* Change border color when focused */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a slight shadow when focused */
+}
+
+/* Style for the placeholder text */
+textarea::placeholder {
+    color: #999;
+}
+
+#notelist{
+    display: flex;
+}
+.notedelete{
+    align-items: end;
+}
+
+
+.note-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .note-text {
+    flex-grow: 1;
+  }
+  
+  .delete-button button {
+    background-color: #ff4646;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+  
+  .delete-button button:hover {
+    background-color: #d42828;
+  }
+  

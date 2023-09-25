@@ -10,6 +10,7 @@ import {
   listAll,
   deleteObject, // Import deleteObject function
 } from "firebase/storage";
+import '../css/Newspost.css'
 
 const Newspost = () => {
   const user = auth.currentUser;
@@ -123,20 +124,29 @@ const Newspost = () => {
   
 
   return (
-    <div>
+    <div >
+      <section id="newsPosting">
       <h3>Post News</h3>
       <textarea
         placeholder="Enter your news update..."
         value={newsText}
         onChange={handleNewsTextChange}
-        rows="4"
-      />
-      <button onClick={handlePostNews}>Post</button>
+        rows="5"
+        style={{width: "450px"}}
+        
+      /><br/>
+      <button   class="search-button" onClick={handlePostNews}>Post</button>
+      </section>
       <ul>
         {newsData.slice().reverse().map((newsItem, index) => (
           <li key={index}>
-            {newsItem.text}
-            <button onClick={() => handleDeleteNews(newsItem.id)}>Delete</button>
+            <div className="note-item">
+              <div className="note-text">
+              {newsItem.text}
+              </div>
+              <div className="delete-button"><button onClick={() => handleDeleteNews(newsItem.id)}>Delete</button></div>
+            </div>
+            
           </li>
         ))}
       </ul>

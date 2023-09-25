@@ -1,0 +1,57 @@
+.profile-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .profile-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .profile-content {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  .profile-username,
+  .profile-profession {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .profile-photos {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(192px, 1fr));
+    gap: 10px;
+    justify-items: center;
+  }
+  
+  .profile-photo {
+    width: 192px;
+    height: 192px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .back-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+  

@@ -9,6 +9,8 @@ import {
 import { storage, auth ,firestore} from "../firebase";
 import { v4 } from "uuid";
 import { collection, setDoc,updateDoc ,getDoc,doc} from "firebase/firestore"; 
+import '../css/Photoupload.css'
+
 
 function Photoupload() {
   const user = auth.currentUser;
@@ -137,25 +139,69 @@ function Photoupload() {
   };
 
   return (
-    <div className= "text-center m-5-auto">
+    <div >
+      <section id="Photoupload">
+      <h3>Upload Photo</h3>
        <p>Total Images Uploaded: {imageCount}</p>
-      <input
+
+       <div class="file-input-container">
+        <label class="file-input-button">
+            Browse
+            <input
+                type="file"
+                class="file-input-hidden"
+                onChange={(event) => {
+                    // setImageUpload(event.target.files[0]);
+                    const selectedFile = event.target.files[0];
+                    setImageUpload(selectedFile);
+                    const selectedFileName = selectedFile ? selectedFile.name : 'No file selected';
+                    document.querySelector('.selected-file').textContent = selectedFileName;
+                
+                }}
+            />
+        </label>
+        <span class="selected-file">No file selected</span>
+        <button class="upload-button" onClick={uploadFile}>Upload Image</button>
+    </div>
+    </section><br/>
+
+       {/* <div class="file-input-container">
+        <label class="file-input-button">
+            <input
         type="file"
         onChange={(event) => {
           setImageUpload(event.target.files[0]);
         }}
       />
-      <button onClick={uploadFile}> Upload Image</button>
+        </label>
+ 
+    </div>
+
+      /> */}
+      {/* <button onClick={uploadFile}> Upload Image</button> */ }
 
       {imageUrls.map((image, index) => (
-        <div key={index}>
-          <img
-            src={image.url}
-            alt={`img-${index}`}
-            style={{ width: "192px", height: "192px" }}
-          />
-          <button onClick={() => deleteFile(image.item)}>Delete</button>
-        </div>
+        // <div key={index}>
+        //   <img
+        //     src={image.url}
+        //     alt={`img-${index}`}
+        //     style={{ width: "192px", height: "192px" }}
+        //   />
+        //   <button onClick={() => deleteFile(image.item)}>Delete</button>
+        // </div>
+        <div className="image-grid">
+        {imageUrls.map((image, index) => (
+          <div key={index} className="image-item">
+            <img
+              src={image.url}
+              alt={`img-${index}`}
+              className="image"
+            />
+            <button onClick={() => deleteFile(image.item)}>Delete</button>
+          </div>
+        ))}
+      </div>
+
       ))}
     </div>
   );
