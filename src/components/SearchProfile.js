@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom"; 
 import { useParams } from 'react-router-dom';
-import {getDoc,doc, collection, query, where} from "firebase/firestore"; 
-import { storage, auth ,firestore} from "../firebase";
+import {getDoc,doc} from "firebase/firestore"; 
+import { firestore} from "../firebase";
 import '../css/SearchProfile.css'
 
  function  SearchProfile() {
@@ -65,7 +65,7 @@ import '../css/SearchProfile.css'
       <p className="profile-photos">Photos:</p>
       <div className="photo-grid">
         {userData.photoURLs.map((photo, index) => (
-          <img
+          <image
             key={index}
             src={photo}
             className="profile-photo"
