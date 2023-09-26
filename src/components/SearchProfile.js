@@ -64,14 +64,22 @@ import '../css/SearchProfile.css'
       <p className="profile-profession">Profession: {userData.proffession}</p>
       <p className="profile-photos">Photos:</p>
       <div className="photo-grid">
-        {userData.photoURLs.map((photo, index) => (
+        {/* {userData.photoURLs.map((photo, index) => (
           <image
             key={index}
             src={photo}
             className="profile-photo"
             alt={`Photo ${index}`}
           />
-        ))}
+        ))} */}
+        {userData.photoURLs && userData.photoURLs.map((photo, index) => (
+    <image
+      key={index}
+      src={photo}
+      className="profile-photo"
+      alt={`Photo ${index}`}
+    />
+  ))}
       </div>
     </div>
   )}

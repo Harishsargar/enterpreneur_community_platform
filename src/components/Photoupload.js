@@ -8,7 +8,7 @@ import {
 } from "firebase/storage";
 import { storage, auth ,firestore} from "../firebase";
 import { v4 } from "uuid";
-import { updateDoc ,getDoc,doc} from "firebase/firestore"; 
+import { updateDoc ,getDoc,doc,addDoc} from "firebase/firestore"; 
 import '../css/Photoupload.css'
 
 
