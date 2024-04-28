@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { getDoc, doc, setDoc,updateDoc } from 'firebase/firestore';
-import { storage, auth, firestore } from '../firebase';
+import {  auth, firestore } from '../firebase';
 
 function UpdateProfile() {
   const user = auth.currentUser;
@@ -70,7 +70,7 @@ function UpdateProfile() {
 
   return (
     <div className="text-center m-5-auto">
-      <h1>Enterpreneur Community Platform</h1>
+      <h1>Social Media Website</h1>
       <ToastContainer />
       <h2>Update Profile</h2>
       <form>

@@ -34,7 +34,7 @@ const Login = () => {
   return (
 
 <div className="text-center m-5-auto">
-  <h1>Enterprenur Community Platform</h1> 
+   <h1>Social Media Website</h1>
 <ToastContainer />
 <h2>Sign in to us</h2>
 <form >
@@ -50,7 +50,6 @@ const Login = () => {
         </p>
     <p>
         <label>Password</label>
-        {/* <Link to="/forget-password"><label className="right-label">Forget password?</label></Link> */}
         <br/>
         <input
           type="password"

@@ -37,32 +37,27 @@ function SearchUser() {
       console.error('Error searching for users:', error);
     }
   };
-
-  return (
-    <div>
-       <div>
-      {/* <h1>User Search</h1> */}
-      {/* <input
-        type="text"
-        placeholder="Search by username"
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-      /> */}
-       <div class="search-container">
-        <input type="text" class="search-input" placeholder="Search..." 
-         value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}/>
-        <button class="search-button" onClick={handleSearch}>Search</button>
-    </div>
-      {/* <button onClick={handleSearch}>Search</button> */}
-      <ul>
-        {searchResults.map((user, index) => (
-        //   <li key={index}>{user.username}</li>
-        <Link to={`/profile/${user.uid}`}>{user.username}</Link>
-        ))}
-      </ul>
-    </div>
-    </div>
-  )
-}
-
+    
+    return (
+      <div>
+        <div className="search-container">
+          <input
+            type="text"
+            className="search-input"
+            placeholder="Search..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+          <button className="search-button" onClick={handleSearch}>Search</button>
+        </div>
+        <ul>
+          {searchResults.map((user, index) => (
+            <li key={index} className="search-result-item">
+              <Link to={`/profile/${user.uid}`}>{user.username}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
 export default SearchUser

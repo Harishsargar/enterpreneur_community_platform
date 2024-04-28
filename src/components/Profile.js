@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { auth ,firestore} from "../firebase";
-import Newspost from './Newspost';
+// import Newspost from './Newspost';`  
 import { useNavigate } from "react-router-dom"; 
 import Photoupload from './Photoupload';
 import {useAuth }from '../AuthContext';
@@ -15,7 +15,6 @@ import '../css/profile.css'
 
 function Profile() {
   const [UserData, setUserData] = useState('')
-  // const [Defaultusername, setDefaultusername] = useState('')
   let navigate = useNavigate();
   const {  logout } = useAuth();
   const currentUser = auth.currentUser;
@@ -24,7 +23,7 @@ function Profile() {
 
 if (currentUser) {
  
-  // console.log("User's username:", currentUser.displayName);
+  console.log("User's username:", currentUser.displayName);
 }
 
 const updateProfile=()=>{
@@ -59,7 +58,7 @@ useEffect(() => {
     }
   })
   
-}, [uid]);
+}, []);  
 
   return (
     <div> 
@@ -87,7 +86,7 @@ useEffect(() => {
       </div> */}
       {/* <p>-------------------------</p> */}
       <div id='firstdiv'>
-        <div class="content"><Newspost/>  </div>
+        {/* <div class="content"><Newspost/>  </div> */}
       <div class="content"><Photoupload/></div>
       </div>
       {/* <button onClick={ updateProfile}>update profile</button>
